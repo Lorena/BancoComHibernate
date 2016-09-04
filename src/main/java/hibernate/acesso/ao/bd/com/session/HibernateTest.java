@@ -12,20 +12,20 @@ public static void main(String[] args) {
   
         session.beginTransaction();
  
-        Department department = new Department("java");
+        Departamento department = new Departamento("java");
         session.save(department);
  
-        session.save(new Employee("Jakab Gipsz",department));
-        session.save(new Employee("Captain Nemo",department));
+        session.save(new Empregado("Jakab Gipsz",department));
+        session.save(new Empregado("Captain Nemo",department));
       
         session.getTransaction().commit();
  
-        Query q = session.createQuery("From Employee ");
+        Query q = session.createQuery("From Empregado ");
                  
-        List<Employee> resultList = q.list();
-        System.out.println("num of employess:" + resultList.size());
-        for (Employee next : resultList) {
-            System.out.println("next employee: " + next);
+        List<Empregado> resultList = q.list();
+        System.out.println("numero de empregados:" + resultList.size());
+        for (Empregado next : resultList) {
+            System.out.println("proximo empregado: " + next);
         }
  
     }

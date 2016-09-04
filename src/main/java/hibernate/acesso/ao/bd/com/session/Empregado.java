@@ -8,23 +8,23 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Employee {
+public class Empregado {
 	@Id
 	@GeneratedValue
 	private Long id;
 	private String name;
 
 	@ManyToOne
-	private Department department;
+	private Departamento department;
 
-	public Employee() {}
+	public Empregado() {}
 
-	public Employee(String name, Department department) {
+	public Empregado(String name, Departamento department) {
 		this.name = name;
 		this.department = department;
 	}
 
-	public Employee(String name) {
+	public Empregado(String name) {
 		this.name = name;
 	}
 
@@ -36,7 +36,7 @@ public class Employee {
 		return name;
 	}
 
-	public Department getDepartment() {
+	public Departamento getDepartment() {
 		return department;
 	}
 

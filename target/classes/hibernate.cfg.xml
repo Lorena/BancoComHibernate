@@ -20,8 +20,8 @@
     <property name="connection.pool_size">1</property>
     <property name="current_session_context_class">thread</property>
  
-     <mapping class="hibernat.bancoDados.Employee" />
-     <mapping class="hibernat.bancoDados.Department" />
+     <mapping class="hibernate.acesso.ao.bd.com.session.Empregado" />
+     <mapping class="hibernate.acesso.ao.bd.com.session.Departamento" />
  
 </session-factory>
 </hibernate-configuration>

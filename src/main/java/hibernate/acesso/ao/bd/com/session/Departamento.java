@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Department {
+public class Departamento {
 
 	@Id
 	@GeneratedValue
@@ -21,12 +21,12 @@ public class Department {
 	private String name;
 
 	@OneToMany(mappedBy="department",cascade=CascadeType.PERSIST)
-	private List<Employee> employees = new ArrayList<Employee>();
+	private List<Empregado> employees = new ArrayList<Empregado>();
 
-	public Department() {
+	public Departamento() {
 		super();
 	}
-	public Department(String name) {
+	public Departamento(String name) {
 		this.name = name;
 	}
 	public Long getId() {
@@ -35,7 +35,7 @@ public class Department {
 	public String getName() {
 		return name;
 	}
-	public List<Employee> getEmployees() {
+	public List<Empregado> getEmployees() {
 		return employees;
 	}
 }

@@ -5,14 +5,10 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 @Entity
 @Table
@@ -31,6 +27,9 @@ public class Department extends BaseBean {
 
 	public Department() {
 		super();
+	}
+	public Department(Long id) {
+		this.id = id;
 	}
 	public Department(String name) {
 		this.name = name;

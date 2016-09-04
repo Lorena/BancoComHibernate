@@ -37,4 +37,14 @@ public final class DaoFactory {
 		return employeeDaoInstance;
 	}
 	
+	private static RoleDao roleDaoInstance;
+	public static RoleDao roleInstance(){
+		
+		if(roleDaoInstance == null){
+			roleDaoInstance = new RoleDao();
+		}
+		
+		return roleDaoInstance;
+	}
+	
 }
